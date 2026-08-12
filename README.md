@@ -56,3 +56,6 @@ Users can drag tasks from one column and drop them into another column to change
 
 ```bash
 git clone https://github.com/yujinashrestha/Task-Manager-.git
+cd Task-Manager-
+npm install
+npm run dev
