@@ -47,7 +47,7 @@ export default function Column({
   const isEmpty = column.tasks.length === 0 && !isAdding;
 
   return (
-    <div className="flex h-full w-[280px] shrink-0 flex-col rounded-lg bg-gray-200 p-3">
+    <div className="flex h-full w-full max-w-full flex-col rounded-lg bg-gray-200 p-3 md:w-[280px] md:max-w-[280px]">
       <div className="mb-2.5 flex items-center gap-2 text-[13px] font-semibold tracking-wide">
         <span className={`h-2 w-2 rounded-full ${DOT_COLORS[column.slug] ?? "bg-gray-500"}`} />
         <span className="flex-1 text-gray-700">{column.name.toUpperCase()}</span>
@@ -80,7 +80,7 @@ export default function Column({
         ref={(node) => {
           drop(node);
         }}
-        className={`flex flex-1 flex-col gap-2 rounded-lg transition-colors ${
+        className={`flex min-h-[220px] flex-1 flex-col gap-2 rounded-lg transition-colors ${
           isOver ? "bg-indigo-100" : ""
         }`}
       >

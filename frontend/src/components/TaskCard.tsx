@@ -92,7 +92,7 @@ export default function TaskCard({
     <div
       ref={ref}
       data-handler-id={handlerId}
-      className={`group rounded-lg bg-white px-3.5 py-3 shadow-sm cursor-grab ${
+      className={`group w-full rounded-lg bg-white px-3.5 py-3 shadow-sm cursor-grab ${
         isDragging ? "opacity-50 shadow-lg" : ""
       }`}
     >

@@ -108,7 +108,7 @@ export default function TaskBoard() {
           </div>
         </header>
 
-        <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-6">
+        <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-6 sm:px-6">
           <h1 className="mb-1 text-2xl font-bold text-gray-900">Task Manager</h1>
           <p className="mb-5 text-sm text-indigo-600">Track tasks from start to completion</p>
 
@@ -125,7 +125,7 @@ export default function TaskBoard() {
             <AddTaskForm onSubmit={handleSubmitNewTask} onCancel={() => setIsAdding(false)} />
           )}
 
-          <div className="board flex flex-1 flex-row items-stretch gap-4 overflow-x-auto min-h-[600px]">
+          <div className="board flex w-full flex-col items-stretch gap-4 overflow-x-hidden md:flex-row md:items-start md:overflow-x-auto min-h-[400px] md:min-h-[600px]">
             {columns.map((column) => (
               <Column
                 key={column.id}
